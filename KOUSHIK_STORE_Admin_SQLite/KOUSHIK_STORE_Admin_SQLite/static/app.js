@@ -1,0 +1,1 @@
+document.querySelectorAll('.add').forEach(f=>f.addEventListener('submit',async e=>{e.preventDefault();try{let r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'X-Requested-With':'XMLHttpRequest'}});let d=await r.json();if(d.ok){let b=f.querySelector('button');b.textContent='Added ✓';setTimeout(()=>b.textContent='Add to Bag',1000);}}catch(_){f.submit()}}));

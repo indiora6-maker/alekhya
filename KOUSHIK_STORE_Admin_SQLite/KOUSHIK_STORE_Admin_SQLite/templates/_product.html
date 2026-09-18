@@ -1,0 +1,1 @@
+<article class="card"><a href="{{url_for('product_page',pid=p.id)}}"><img src="{{p.image}}" alt="{{p.name}}"></a><small>{{p.category}}</small><h3>{{p.name}}</h3><b>₹{{"{:,}".format(p.price)}}</b> <del>₹{{"{:,}".format(p.old_price)}}</del><form class="add" method="post" action="{{url_for('add',pid=p.id)}}"><button>Add to Bag</button></form></article>
